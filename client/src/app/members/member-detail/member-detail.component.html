@@ -32,9 +32,9 @@
     <div class="col-8">
         <tabset class="member-tabset">
             <tab heading="About {{member.knownAs}}">
-                <h4>Description</h4>
+                <h4 *ngIf="member.introduction != null">Description</h4>
                 <p>{{member.introduction}}</p>
-                <h4>Looking for</h4>
+                <h4 *ngIf="member.lookingFor != null">Looking for</h4>
                 <p>{{member.lookingFor}}</p>
             </tab>
             <tab heading="Interests">
