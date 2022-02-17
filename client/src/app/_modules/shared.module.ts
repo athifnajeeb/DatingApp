@@ -12,7 +12,6 @@ import { TimeagoModule } from 'ngx-timeago';
 
 
 
-
 @NgModule({
   declarations: [],
   imports: [
@@ -41,4 +40,4 @@ import { TimeagoModule } from 'ngx-timeago';
     TimeagoModule
   ]
 })
-export class SharedModule { }
+export class SharedModule{}
