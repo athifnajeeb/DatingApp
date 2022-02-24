@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220222172442_GroupsAdded")]
+    [Migration("20220224032926_GroupsAdded")]
     partial class GroupsAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
