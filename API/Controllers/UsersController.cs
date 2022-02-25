@@ -34,6 +34,7 @@ namespace API.Controllers
         {
             var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
             userParams.CurrentUsername = user.UserName;
+
             if(string.IsNullOrEmpty(userParams.Gender)) 
                 userParams.Gender = user.Gender == "male" ? "female" : "male" ;
                 
@@ -46,8 +47,9 @@ namespace API.Controllers
         [HttpGet("{username}", Name ="GetUser")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
-            var user = await _userRepository.GetUserByUsernameAsync(username);
-            return _mapper.Map<MemberDto>(user);
+            // var user = await _userRepository.GetUserByUsernameAsync(username);
+            // return _mapper.Map<MemberDto>(user);
+            return await _userRepository.GetMemberAsync(username);
         }
 
         [HttpPut]

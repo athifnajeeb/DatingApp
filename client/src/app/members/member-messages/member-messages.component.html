@@ -2,6 +2,7 @@
     <div class="card-body"
         #scrollMe
         style="overflow: scroll; height: 535px;"
+<<<<<<< HEAD
         [scrollTop]="scrollMe.scrollHeight"
     >
         <div *ngIf="messages?.length === 0">
@@ -11,6 +12,16 @@
         <ul *ngIf="messages?.length > 0" 
             class="chat">
             <li *ngFor="let message of messages">
+=======
+    >
+        <div *ngIf="(messageService.messageThread$ | async)?.length === 0">
+            No messages yet... say hi by using the message box below
+        </div>
+
+        <ul *ngIf="(messageService.messageThread$ | async).length > 0" 
+            class="chat">
+            <li *ngFor="let message of (messageService.messageThread$ | async)">
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea
                 <div>
                     <span class="chat-img float-end">
                         <img class="rounded-circle" src="{{message.senderPhotoUrl || './assets/user.png'}}" 
@@ -54,4 +65,8 @@
             </div>
         </form>
     </div>
+<<<<<<< HEAD
 </div> 
+=======
+</div>
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea

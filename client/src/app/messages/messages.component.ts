@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Message } from '../_models/message';
 import { Pagination } from '../_models/pagination';
 import { MessageService } from '../_services/message.service';
+<<<<<<< HEAD
+=======
+import { getPaginationHeaders } from '../_services/paginationHelper';
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea
 
 @Component({
   selector: 'app-messages',

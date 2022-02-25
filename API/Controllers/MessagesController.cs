@@ -8,12 +8,18 @@ using API.Extensions;
 using API.Helpers;
 using API.interfaces;
 using AutoMapper;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Authorization;
+=======
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+<<<<<<< HEAD
     [Authorize]
+=======
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea
     public class MessagesController : BaseApiController
     {
         private readonly IUserRepository _userRepository;
@@ -34,9 +40,13 @@ namespace API.Controllers
 
             var sender = await _userRepository.GetUserByUsernameAsync(username);
             var recipient = await _userRepository.GetUserByUsernameAsync(createMessageDto.RecipientUsername.ToLower());
+<<<<<<< HEAD
 
             if (recipient == null) return NotFound();
 
+=======
+            if (recipient == null) return NotFound();
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea
             var message = new Message{
               Sender = sender,
               Recipient = recipient,
@@ -86,5 +96,9 @@ namespace API.Controllers
 
             return BadRequest("Problem deleting the message");
         }
+<<<<<<< HEAD
      }
+=======
+    }
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea
 }

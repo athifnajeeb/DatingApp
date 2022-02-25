@@ -4,13 +4,19 @@
         <ul class="list-inline member-icons animate text-center">
             <li class="list-inline-item"><button class="btn btn-primary" routerLink="/members/{{member.username}}"><i class="fa fa-user"></i></button></li>
             <li class="list-inline-item"><button class="btn btn-secondary" (click)="addLike(member)"><i class="fa fa-heart"></i></button></li>
+<<<<<<< HEAD
             <li class="list-inline-item"><button routerLink="/members/{{member.username}}" [queryParams]='{tab: 3}' class="btn btn-info"><i class="fa fa-envelope"></i></button></li>
+=======
+            <li class="list-inline-item"><button routerLink='/members/{{member.username}}' [queryParams]='{tab: 3}' class="btn btn-info"><i class="fa fa-envelope"></i></button></li>
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea
         </ul>
     </div>
     <div class="card-body p-1">
         <h6 class="card-title text-center mb-1">
-            <i class="fa fa-user mr-2">
-            </i>
+            <span 
+                [class.is-online]='(presence.onlineUsers$ | async).includes(member.username)'>
+                <i class="fa fa-user mr-2"></i>
+            </span>
             {{member.knownAs}}, {{member.age}}
         </h6>
         <p class="card-text text-muted text-center">{{member.city}}</p>

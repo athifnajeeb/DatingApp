@@ -9,4 +9,8 @@ export interface Message {
     content: string;
     dateRead?: Date;
     messageSent: Date;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea

@@ -7,7 +7,11 @@ namespace API.DTOs
 {
     public class MessageDto
     {
+<<<<<<< HEAD
          public int Id { get; set; }
+=======
+        public int Id { get; set; }
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea
         public int SenderId { get; set; }
         public string SenderUsername { get; set; }
         public string SenderPhotoUrl { get; set; }

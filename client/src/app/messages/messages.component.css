@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .card {
     border: none;
 }
@@ -17,3 +18,8 @@
 .rounded-circle {
     max-height: 50px;
 } 
+=======
+.img-circle {
+    max-height: 50px;
+}
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea

@@ -22,4 +22,8 @@ export function getPaginatedResult<T>(url, params, http: HttpClient) {
     params = params.append('pageSize', pageSize.toString());
 
     return params;
+<<<<<<< HEAD
   } 
+=======
+  }
+>>>>>>> c656a233555a5b04503e0351f85cf57b0fc6d6ea
